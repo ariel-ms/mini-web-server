@@ -4,11 +4,9 @@ const omdb = require('./omdb.js')
 
 const app = express()
 
-const publicDir = path.join(__dirname, 'public')
+const port = process.env.PORT || 3000
 
-// hola.com
-// hola.com/about
-// hola.com/contactanos
+const publicDir = path.join(__dirname, 'public')
 
 app.use(express.static(publicDir))
 
@@ -98,6 +96,6 @@ app.get('*', function(req, res) {
 })
 
 
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log('up and running')
 })
