@@ -1,1 +1,1 @@
-exports.credentials.apikey = '53f106dd'
+module.exports.apikey = '53f106dd'
